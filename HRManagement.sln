@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{C99C1DCD-FABD-4806-9BAF-4B3CCCB796D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{979AAC24-F671-4A22-B442-AE360D1F6207}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{56151249-B902-42D9-9316-D6E4AC38EF8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{252C14AE-0BCB-4DA3-8292-5ADCED5E70BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CCE95EB4-EAEA-4E98-AC0C-527F0AF0B709}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{337B90DE-1C98-4B7F-85FD-0C9686625D49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRmanagementDomain", "HRmanagementDomain\HRmanagementDomain.csproj", "{7F0EAC8F-8A40-4965-808F-D62073621D7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.Application", "HRManagement.Application\HRManagement.Application.csproj", "{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F0EAC8F-8A40-4965-808F-D62073621D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F0EAC8F-8A40-4965-808F-D62073621D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F0EAC8F-8A40-4965-808F-D62073621D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F0EAC8F-8A40-4965-808F-D62073621D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56151249-B902-42D9-9316-D6E4AC38EF8D} = {C99C1DCD-FABD-4806-9BAF-4B3CCCB796D8}
+		{252C14AE-0BCB-4DA3-8292-5ADCED5E70BF} = {C99C1DCD-FABD-4806-9BAF-4B3CCCB796D8}
+		{CCE95EB4-EAEA-4E98-AC0C-527F0AF0B709} = {C99C1DCD-FABD-4806-9BAF-4B3CCCB796D8}
+		{337B90DE-1C98-4B7F-85FD-0C9686625D49} = {C99C1DCD-FABD-4806-9BAF-4B3CCCB796D8}
+		{7F0EAC8F-8A40-4965-808F-D62073621D7D} = {337B90DE-1C98-4B7F-85FD-0C9686625D49}
+		{929B698E-9E8B-4C80-A8BB-B068DB93A2A6} = {337B90DE-1C98-4B7F-85FD-0C9686625D49}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90CC32E7-3818-4507-99A6-198C3812A217}
+	EndGlobalSection
+EndGlobal
