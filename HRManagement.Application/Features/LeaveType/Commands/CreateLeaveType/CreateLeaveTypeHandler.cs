@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HRmanagementDomain;
+using HRManagement.Application.Exceptions;
 
 namespace HRManagement.Application.Features.LeaveType.Commands.CreateLeaveType
 {
@@ -21,6 +22,13 @@ namespace HRManagement.Application.Features.LeaveType.Commands.CreateLeaveType
         }
         public async Task<int> Handle(CreateLeaveTypeCommand request, CancellationToken cancellationToken)
         {
+            var validator = new CreateLeaveTypeCommandVlidator(_leaveTypeRepository);
+            var validatonResult = await validator.ValidateAsync(request);
+
+            if (validatonResult.Errors.Any())
+            {
+                throw new BadRequestException("Invalid LeaveType", validatonResult);
+            }
             var leaveTypeToCreate = _mapper.Map<HRmanagementDomain.LeaveType>(request);
 
             await _leaveTypeRepository.CreateAsync(leaveTypeToCreate);

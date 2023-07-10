@@ -15,9 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{337B90DE-1C98-4B7F-85FD-0C9686625D49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRmanagementDomain", "HRmanagementDomain\HRmanagementDomain.csproj", "{7F0EAC8F-8A40-4965-808F-D62073621D7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRmanagementDomain", "HRmanagementDomain\HRmanagementDomain.csproj", "{7F0EAC8F-8A40-4965-808F-D62073621D7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.Application", "HRManagement.Application\HRManagement.Application.csproj", "{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.Application", "HRManagement.Application\HRManagement.Application.csproj", "{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.Persistance", "HRManagement.Persistance\HRManagement.Persistance.csproj", "{12F05B33-0F15-4186-B553-878F280EE212}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{929B698E-9E8B-4C80-A8BB-B068DB93A2A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F05B33-0F15-4186-B553-878F280EE212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F05B33-0F15-4186-B553-878F280EE212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F05B33-0F15-4186-B553-878F280EE212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F05B33-0F15-4186-B553-878F280EE212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{337B90DE-1C98-4B7F-85FD-0C9686625D49} = {C99C1DCD-FABD-4806-9BAF-4B3CCCB796D8}
 		{7F0EAC8F-8A40-4965-808F-D62073621D7D} = {337B90DE-1C98-4B7F-85FD-0C9686625D49}
 		{929B698E-9E8B-4C80-A8BB-B068DB93A2A6} = {337B90DE-1C98-4B7F-85FD-0C9686625D49}
+		{12F05B33-0F15-4186-B553-878F280EE212} = {CCE95EB4-EAEA-4E98-AC0C-527F0AF0B709}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90CC32E7-3818-4507-99A6-198C3812A217}
