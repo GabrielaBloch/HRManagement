@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRManagement.Application.Features.LeaveAllocation.Queries.GetLeaveAllocations
+namespace HRManagement.Application.Features.LeaveAllocation.Queries.GetLeaveAllocationDetails
 {
-    public class LeaveAllocationDto
+    public class LeaveAllocationDetailsDto
     {
         public int Id { get; set; }
         public int NumberOfDays { get; set; }
