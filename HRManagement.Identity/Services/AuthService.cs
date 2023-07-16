@@ -118,9 +118,6 @@ namespace HRManagement.Identity.Services
             }
         }
 
-        public Task<RegistrationResponse> Register(RegistrationResponse request)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
