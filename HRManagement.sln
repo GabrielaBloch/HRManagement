@@ -25,9 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.Infrastructure
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.Api", "HRManagement.Api\HRManagement.Api.csproj", "{1E5248FB-4921-44F8-90DA-55A42FD405DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.Application.UnitTests", "HRManagement.Application.UnitTests\HRManagement.Application.UnitTests.csproj", "{7B6D578A-C507-43AF-B756-34D407C3BB0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.Application.UnitTests", "HRManagement.Application.UnitTests\HRManagement.Application.UnitTests.csproj", "{7B6D578A-C507-43AF-B756-34D407C3BB0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.Persistance.IntegrationTests", "HRManagement.Persistance.IntegrationTests\HRManagement.Persistance.IntegrationTests.csproj", "{B07548BB-1C3E-4F83-AD74-6651602F2E28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.Persistance.IntegrationTests", "HRManagement.Persistance.IntegrationTests\HRManagement.Persistance.IntegrationTests.csproj", "{B07548BB-1C3E-4F83-AD74-6651602F2E28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.BlazorUI", "HRManagement.BlazorUI\HRManagement.BlazorUI.csproj", "{4A0E6AAE-4A04-4DDD-8765-7007E941CA57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.Identity", "HRManagement.Identity\HRManagement.Identity.csproj", "{D9800365-F217-4DF1-BAD3-8FA9817C21C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{B07548BB-1C3E-4F83-AD74-6651602F2E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B07548BB-1C3E-4F83-AD74-6651602F2E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B07548BB-1C3E-4F83-AD74-6651602F2E28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A0E6AAE-4A04-4DDD-8765-7007E941CA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A0E6AAE-4A04-4DDD-8765-7007E941CA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A0E6AAE-4A04-4DDD-8765-7007E941CA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A0E6AAE-4A04-4DDD-8765-7007E941CA57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9800365-F217-4DF1-BAD3-8FA9817C21C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9800365-F217-4DF1-BAD3-8FA9817C21C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9800365-F217-4DF1-BAD3-8FA9817C21C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9800365-F217-4DF1-BAD3-8FA9817C21C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +91,8 @@ Global
 		{1E5248FB-4921-44F8-90DA-55A42FD405DC} = {56151249-B902-42D9-9316-D6E4AC38EF8D}
 		{7B6D578A-C507-43AF-B756-34D407C3BB0B} = {979AAC24-F671-4A22-B442-AE360D1F6207}
 		{B07548BB-1C3E-4F83-AD74-6651602F2E28} = {979AAC24-F671-4A22-B442-AE360D1F6207}
+		{4A0E6AAE-4A04-4DDD-8765-7007E941CA57} = {252C14AE-0BCB-4DA3-8292-5ADCED5E70BF}
+		{D9800365-F217-4DF1-BAD3-8FA9817C21C8} = {CCE95EB4-EAEA-4E98-AC0C-527F0AF0B709}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90CC32E7-3818-4507-99A6-198C3812A217}
