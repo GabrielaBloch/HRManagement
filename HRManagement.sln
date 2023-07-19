@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.Persistance.In
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.BlazorUI", "HRManagement.BlazorUI\HRManagement.BlazorUI.csproj", "{4A0E6AAE-4A04-4DDD-8765-7007E941CA57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.Identity", "HRManagement.Identity\HRManagement.Identity.csproj", "{D9800365-F217-4DF1-BAD3-8FA9817C21C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.Identity", "HRManagement.Identity\HRManagement.Identity.csproj", "{D9800365-F217-4DF1-BAD3-8FA9817C21C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

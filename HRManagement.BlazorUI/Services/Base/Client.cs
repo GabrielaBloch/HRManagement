@@ -9,6 +9,8 @@
                 return _httpClient;
             }
         }
+
+        HttpClient IClient.HttpClient { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 
 }

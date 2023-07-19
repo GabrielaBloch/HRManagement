@@ -2,6 +2,7 @@ using HRManagement.Application;
 using HRManagement.Persistance;
 using HRManagement.Infrastructure;
 using HRManagement.Api.Middleware;
+using HRManagement.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddPeristanceServices(builder.Configuration);
+builder.Services.ConfigureIdentityServices(builder.Configuration);
 
 builder.Services.AddControllers();
 
@@ -37,7 +39,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors("all");
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
