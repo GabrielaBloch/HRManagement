@@ -2,7 +2,7 @@
 using HRManagement.BlazorUI.Models.LeaveTypes;
 using HRManagement.BlazorUI.Services.Base;
 
-namespace HRManagement.BlazorUI.Contracts.MappingProfiles
+namespace HRManagement.BlazorUI.MappingProfiles
 {
     public class MappingConfig : Profile
     {

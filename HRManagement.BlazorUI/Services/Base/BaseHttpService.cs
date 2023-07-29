@@ -9,7 +9,7 @@ namespace HRManagement.BlazorUI.Services.Base
 
         public BaseHttpService(IClient client, ILocalStorageService localStorageService)
         {
-            _client = _client;
+            _client = client;
             _localStorageService = localStorageService;
         }
 

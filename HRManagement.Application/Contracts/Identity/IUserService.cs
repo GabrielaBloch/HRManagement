@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace HRManagement.Application.Contracts.Identity
 {
+
     public interface IUserService
     {
-        public interface IUserService
-        {
-            Task<List<Employee>> GetEmployees();
-            Task<Employee> GetEmployee(string userId);
-        }
+        Task<List<Employee>> GetEmployees();
+        Task<Employee> GetEmployee(string userId);
     }
+   
 }

@@ -21,6 +21,7 @@ builder.Services.AddHttpClient<IClient, Client>(client => client.BaseAddress = n
 
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddAuthorizationCore();
+
 builder.Services.AddScoped<AuthenticationStateProvider, ApiAuthStateProvider>();
 builder.Services.AddScoped<ILeaveTypeServices, LeaveTypeService>();
 builder.Services.AddScoped<ILeaveRequestServices, LeaveRequestService>();
