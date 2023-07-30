@@ -1,20 +1,24 @@
 ﻿using AutoMapper;
 using Blazored.LocalStorage;
+using HRManagement.Application.Features.LeaveType.Commands.CreateLeaveType;
+using HRManagement.Application.Features.LeaveType.Commands.UpdateLeaveType;
 using HRManagement.BlazorUI.Contracts;
 using HRManagement.BlazorUI.Models.LeaveTypes;
 using HRManagement.BlazorUI.Services.Base;
+using CreateLeaveTypeCommand = HRManagement.BlazorUI.Services.Base.CreateLeaveTypeCommand;
+using UpdateLeaveTypeCommand = HRManagement.BlazorUI.Services.Base.UpdateLeaveTypeCommand;
 
 namespace HRManagement.BlazorUI.Services
 {
     public class LeaveTypeService : BaseHttpService, ILeaveTypeServices
     {
         private readonly IMapper _mapper;
+        public IMapper Mapper { get; }
         public LeaveTypeService(IClient client, IMapper mapper, ILocalStorageService localStorageService) : base(client, localStorageService)
         {
             _mapper = mapper;
         }
 
-        public IMapper Mapper { get; }
 
         public async Task<Response<Guid>> CreateLeaveType(LeaveTypeVM leaveType)
         {

@@ -15,6 +15,7 @@ using HRManagement.BlazorUI;
 using HRManagement.BlazorUI.Shared;
 using HRManagement.BlazorUI.Models.LeaveTypes;
 using HRManagement.BlazorUI.Contracts;
+using HRManagement.BlazorUI.Services;
 
 namespace HRManagement.BlazorUI.Pages.LeaveTypes
 {
@@ -26,6 +27,8 @@ namespace HRManagement.BlazorUI.Pages.LeaveTypes
         [Inject]
         public ILeaveTypeServices LeaveTypeService { get; set; }
         [Inject]
+        public ILeaveAllocationServices leaveAllocationServices { get; set; }
+
         public List<LeaveTypeVM> LeaveTypes { get; private set; }
         public string Message { get; set; } = string.Empty;
 
@@ -36,8 +39,7 @@ namespace HRManagement.BlazorUI.Pages.LeaveTypes
 
         protected void AllocateLeaveType(int id)
         {
-            // Use Leave Allocation Service here
-           
+            leaveAllocationServices.CreateLeaveAllocations(id);
         }
 
         protected void EditLeaveType(int id)
@@ -55,7 +57,6 @@ namespace HRManagement.BlazorUI.Pages.LeaveTypes
             var response = await LeaveTypeService.DeleteLeaveType(id);
             if (response.Success)
             {
-
                 StateHasChanged();
             }
             else
@@ -68,6 +69,5 @@ namespace HRManagement.BlazorUI.Pages.LeaveTypes
         {
             LeaveTypes = await LeaveTypeService.GetLeaveTypes();
         }
-    
-}
+    }
 }

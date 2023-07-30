@@ -1,6 +1,7 @@
 using Blazored.LocalStorage;
 using HRManagement.BlazorUI;
 using HRManagement.BlazorUI.Contracts;
+using HRManagement.BlazorUI.Handlers;
 using HRManagement.BlazorUI.Providers;
 using HRManagement.BlazorUI.Services;
 using HRManagement.BlazorUI.Services.Base;
@@ -14,8 +15,9 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-builder.Services.AddHttpClient<IClient, Client>(client => client.BaseAddress = new Uri("https://localhost:7218"));
+builder.Services.AddTransient<JwtAuthorizationMessageHandler>();
+builder.Services.AddHttpClient<IClient, Client>(client => client.BaseAddress = new Uri("https://localhost:7218"))
+    .AddHttpMessageHandler<JwtAuthorizationMessageHandler>();
 
 
 

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HRManagement.Application.Contracts.Identity;
 using HRManagement.Application.Contracts.Persistance;
 using MediatR;
 using System;
@@ -13,24 +14,45 @@ namespace HRManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequest
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;
+        private readonly IUserService _userService;
 
         public GetLeaveRequestListQueryHandler(ILeaveRequestRepository leaveRequestRepository,
-            IMapper mapper)
+            IMapper mapper, IUserService userService)
         {
             _leaveRequestRepository = leaveRequestRepository;
             _mapper = mapper;
+            this._userService = userService;
         }
 
         public async Task<List<LeaveRequestListDto>> Handle(GetLeaveRequestListQuery request, CancellationToken cancellationToken)
         {
 
-            // Check if it is logged in employee
 
             var leaveRequests = await _leaveRequestRepository.GetLeaveRequestsWithDetails();
             var requests = _mapper.Map<List<LeaveRequestListDto>>(leaveRequests);
 
+            // Check if it is logged in employee
+            if (request.IsLoggedInUser)
+            {
+                var userId = _userService.UserId;
+                leaveRequests = await _leaveRequestRepository.GetLeaveRequestsWithDetails(userId);
 
-            // Fill requests with employee information
+                var employee = await _userService.GetEmployee(userId);
+                requests = _mapper.Map<List<LeaveRequestListDto>>(leaveRequests);
+                foreach (var req in requests)
+                {
+                    req.Employee = employee;
+                }
+            }
+            else
+            {
+                leaveRequests = await _leaveRequestRepository.GetLeaveRequestsWithDetails();
+                requests = _mapper.Map<List<LeaveRequestListDto>>(leaveRequests);
+                foreach (var req in requests)
+                {
+                    req.Employee = await _userService.GetEmployee(req.RequestingEmployeeId);
+                }
+            }
 
             return requests;
 

@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddPeristanceServices(builder.Configuration);
-builder.Services.ConfigureIdentityServices(builder.Configuration);
+builder.Services.AddIdentityServices(builder.Configuration);
 
 builder.Services.AddControllers();
 
@@ -22,6 +22,7 @@ builder.Services.AddCors(options =>
     .AllowAnyMethod());
 });
 
+builder.Services.AddHttpContextAccessor();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
